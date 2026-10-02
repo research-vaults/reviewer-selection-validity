@@ -1,0 +1,216 @@
+{
+  "source_n": 6409,
+  "score_complete_union_n": 4867,
+  "added_score_records": 1024,
+  "source_without_joint_scores": 1542,
+  "overlap_label_disagreements": 0,
+  "known_strict_n": 3443,
+  "panels": [
+    {
+      "year": 2022,
+      "stage": "all",
+      "n": 2163,
+      "k": 216,
+      "known_outcomes": 1435,
+      "unknown_outcomes": 728,
+      "threshold_count": 25.000000000000004,
+      "unknown_selection_mass": {
+        "TNS": 0.16724537037037038,
+        "ENS": 0.15098024001655286,
+        "Recommendation": 0.10353535353535354
+      },
+      "contrasts": {
+        "ENS_minus_TNS": {
+          "bounds": [
+            0.014907278088143988,
+            0.2368417649493068
+          ],
+          "known_contribution": 0.13400708669563416,
+          "negative_unknown_mass": 0.11909980860749017,
+          "cancellation_fraction_of_negative_unknown_mass": null
+        },
+        "Recommendation_minus_ENS": {
+          "bounds": [
+            -0.09589728758723172,
+            0.06431869909523541
+          ],
+          "known_contribution": 0.0079331489946015,
+          "negative_unknown_mass": 0.10383043658183322,
+          "cancellation_fraction_of_negative_unknown_mass": 0.07640485059839891
+        }
+      }
+    },
+    {
+      "year": 2022,
+      "stage": "accepted",
+      "n": 974,
+      "k": 97,
+      "known_outcomes": 819,
+      "unknown_outcomes": 155,
+      "threshold_count": 25.000000000000004,
+      "unknown_selection_mass": {
+        "TNS": 0.18157632191553044,
+        "ENS": 0.16071900607983083,
+        "Recommendation": 0.11204557786218122
+      },
+      "contrasts": {
+        "ENS_minus_TNS": {
+          "bounds": [
+            0.026741023082892057,
+            0.23026613116403605
+          ],
+          "known_contribution": 0.13893223504131386,
+          "negative_unknown_mass": 0.1121912119584218,
+          "cancellation_fraction_of_negative_unknown_mass": null
+        },
+        "Recommendation_minus_ENS": {
+          "bounds": [
+            -0.13474059852247589,
+            0.031077396107238753
+          ],
+          "known_contribution": -0.027494887098793774,
+          "negative_unknown_mass": 0.10724571142368212,
+          "cancellation_fraction_of_negative_unknown_mass": null
+        }
+      }
+    },
+    {
+      "year": 2022,
+      "stage": "nonaccepted",
+      "n": 1189,
+      "k": 119,
+      "known_outcomes": 616,
+      "unknown_outcomes": 573,
+      "threshold_count": 25.000000000000004,
+      "unknown_selection_mass": {
+        "TNS": 0.3718708536045997,
+        "ENS": 0.43937575030012,
+        "Recommendation": 0.4570047196960976
+      },
+      "contrasts": {
+        "ENS_minus_TNS": {
+          "bounds": [
+            -0.21335692171605486,
+            0.47263536993744865
+          ],
+          "known_contribution": 0.09588677576293675,
+          "negative_unknown_mass": 0.3092436974789916,
+          "cancellation_fraction_of_negative_unknown_mass": 0.3100686498855835
+        },
+        "Recommendation_minus_ENS": {
+          "bounds": [
+            -0.36823496521896426,
+            0.25716588005065033
+          ],
+          "known_contribution": -0.06434902728214573,
+          "negative_unknown_mass": 0.30388593793681856,
+          "cancellation_fraction_of_negative_unknown_mass": null
+        }
+      }
+    },
+    {
+      "year": 2023,
+      "stage": "all",
+      "n": 2704,
+      "k": 270,
+      "known_outcomes": 2008,
+      "unknown_outcomes": 696,
+      "threshold_count": 25.000000000000004,
+      "unknown_selection_mass": {
+        "TNS": 0.13999999999999999,
+        "ENS": 0.0937037037037037,
+        "Recommendation": 0.09288888888888888
+      },
+      "contrasts": {
+        "ENS_minus_TNS": {
+          "bounds": [
+            0.015185185185185177,
+            0.1733333333333333
+          ],
+          "known_contribution": 0.11740740740740739,
+          "negative_unknown_mass": 0.10222222222222221,
+          "cancellation_fraction_of_negative_unknown_mass": null
+        },
+        "Recommendation_minus_ENS": {
+          "bounds": [
+            -0.04385185185185185,
+            0.07607407407407407
+          ],
+          "known_contribution": 0.016518518518518523,
+          "negative_unknown_mass": 0.06037037037037037,
+          "cancellation_fraction_of_negative_unknown_mass": 0.2736196319018405
+        }
+      }
+    },
+    {
+      "year": 2023,
+      "stage": "accepted",
+      "n": 1312,
+      "k": 131,
+      "known_outcomes": 1184,
+      "unknown_outcomes": 128,
+      "threshold_count": 25.000000000000004,
+      "unknown_selection_mass": {
+        "TNS": 0.10174141221374046,
+        "ENS": 0.04373140121619873,
+        "Recommendation": 0.06304445442299056
+      },
+      "contrasts": {
+        "ENS_minus_TNS": {
+          "bounds": [
+            0.00412205654030276,
+            0.10665593867253201
+          ],
+          "known_contribution": 0.08439400310518824,
+          "negative_unknown_mass": 0.08027194656488548,
+          "cancellation_fraction_of_negative_unknown_mass": null
+        },
+        "Recommendation_minus_ENS": {
+          "bounds": [
+            0.03222089456820376,
+            0.09423028624051508
+          ],
+          "known_contribution": 0.0535690638009635,
+          "negative_unknown_mass": 0.021348169232759735,
+          "cancellation_fraction_of_negative_unknown_mass": null
+        }
+      }
+    },
+    {
+      "year": 2023,
+      "stage": "nonaccepted",
+      "n": 1392,
+      "k": 139,
+      "known_outcomes": 824,
+      "unknown_outcomes": 568,
+      "threshold_count": 25.000000000000004,
+      "unknown_selection_mass": {
+        "TNS": 0.35798561151079134,
+        "ENS": 0.3405110394443066,
+        "Recommendation": 0.410263788968825
+      },
+      "contrasts": {
+        "ENS_minus_TNS": {
+          "bounds": [
+            -0.16867278590920365,
+            0.26566311089059785
+          ],
+          "known_contribution": 0.05723244852393946,
+          "negative_unknown_mass": 0.22590523443314312,
+          "cancellation_fraction_of_negative_unknown_mass": 0.2533471553572056
+        },
+        "Recommendation_minus_ENS": {
+          "bounds": [
+            -0.2503332506408666,
+            0.29314148681055163
+          ],
+          "known_contribution": -0.013472256677416666,
+          "negative_unknown_mass": 0.23686099396344992,
+          "cancellation_fraction_of_negative_unknown_mass": null
+        }
+      }
+    }
+  ],
+  "scope": "Sharp conditional identification bounds; not confidence intervals or full-venue estimates",
+  "validation": "PASS: exhaustive small-case enumeration and identical-policy bounds"
+}

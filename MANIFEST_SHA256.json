@@ -1,0 +1,17 @@
+{
+  ".gitignore": "5ba3778184539f166bfdf4c0592622e0f6af73199719ccf8cd7daee3478e90ef",
+  "DATA_PROVENANCE.md": "ae41b50538cea31c9560166a12f3e40bdc52877a4b9d1240aa21a51430e8133a",
+  "INPUTS.md": "d9e48ed126a2fd98d224ecfaa881cc522a03535100326965234ef02df913f282",
+  "LICENSE": "644e0126b9cee866331f8e5a59736736a755257d4e5270cf0f2fbaaa5391e043",
+  "README.md": "af0bc0614a78116a995ae701a263885b03d2ab1dfe18af54a80d2a9d2d7c3d67",
+  "RESULTS.md": "71d229736fbcd1efb2608eb23131f595eeeafb27415dbc161908d482a66600a5",
+  "requirements.txt": "4b81b6b6a549771115529e6900b9589835cdbfff0c6acf179aef53d283b744d5",
+  "results/corrected_results.json": "c5bee8c64b40e5a1958c0dbdf831784ddf785d3526f1892d3948056c9e274001",
+  "results/decision_pool_comparisons.json": "d58daadc6abc7996915f616504bfef25294eff000787d22db71a1d5582946317",
+  "results/missing_outcome_bounds.json": "190f4ac713b2cf9545a450d3b6aedb880325877e712cd56bb241b6a0db48d036",
+  "results/same_reviewer_analysis.json": "64e88e26cf99ace1d967de85de1f01cadc1b2d2841b57d214c34cb533289576c",
+  "results/scorer_portability.json": "afba43e642b68d5ad2ab437d26b6e03e6b9badc363fbad5025bae7e5463a4c52",
+  "scripts/replay_results.py": "16efe2a2043119136a840f41bcb83383ece2b64336b1b49de13c95e02c5fc5c4",
+  "scripts/verify_release.py": "37c0a5f0849838f1be866bda231675dd34593b80255f67dde0358118abeb1038",
+  "tests/test_analysis.py": "43fedd381426718562a3b64ceefce0c55aedabb02b38895a2b8f51f498d627e3"
+}

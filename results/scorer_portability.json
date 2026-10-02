@@ -1,0 +1,23 @@
+{
+  "n": 508,
+  "rho": {
+    "GPT": 0.13520708602062495,
+    "Sonnet": 0.5184043232107604,
+    "TNS_ENS": 0.24176810920052433
+  },
+  "difference_order": [
+    "GPT_minus_TNS_ENS",
+    "Sonnet_minus_TNS_ENS"
+  ],
+  "ci95": [
+    [
+      -0.22936453780143973,
+      0.010338051794613414
+    ],
+    [
+      0.17294309582608858,
+      0.3719992186661355
+    ]
+  ],
+  "ci_scope": "fixed out-of-fold predictions; no nested refit"
+}

@@ -2,15 +2,17 @@
 
 Analysis code and aggregate results for **The Selection-Target Problem in AI-Assisted Science: Reviewer Novelty and Later Scientific Uptake**.
 
-The study compares Technical Novelty and Significance (TNS), Empirical Novelty and Significance (ENS), and Recommendation scores with later citation uptake. It separates adjusted rank association, fixed-budget selection yield, and sensitivity to unobserved citation outcomes. These observational analyses concern uptake, not intrinsic scientific value or the causal benefit of deploying a selector.
+[Read the matching research draft (1 October 2026)](https://odysseus-personal-website.vercel.app/materials/papers/selection-target.pdf) | Code and aggregate-results release: **2 October 2026**
+
+The study compares Technical Novelty and Significance (TNS), Empirical Novelty and Significance (ENS), and Recommendation scores with later citation uptake. In the corrected matched population, year-and-acceptance-adjusted correlation is .009 for TNS and .188 for ENS. We separately assess fixed-budget selection yield and sensitivity to missing citation outcomes. These observational analyses concern uptake, not intrinsic scientific value or the causal benefit of deploying a selector.
 
 ## Version and scope
 
-Release `2026-10-02` represents the corrected research analysis on 3,443 linked papers and a 4,867-paper score-observed population. It is **not** the original workshop numerical snapshot. Earlier coefficients and population counts must not be mixed with these results. No manuscript PDF or source is included in this code release.
+The linked 19-page research draft incorporates the corrected analysis on **3,443** title-and-author-matched papers with all three reviewer scores and a **4,867**-paper score-observed population for missing-outcome bounds. It develops the earlier AI for Meta-Science workshop paper; it is not the original submitted workshop attachment or a main-track accepted paper. The earlier workshop snapshot used a 3,839-paper joint comparison and reported conditional TNS/ENS correlations of .017/.192. Those values are superseded here by .009/.188 on the corrected population. Do not mix the versions.
 
-This is a **code-and-aggregate-results release**, not a complete downloadable dataset or a claim of end-to-end raw-data reproducibility. Row-level API-derived outcomes, source texts, human-rating records and provider response logs are withheld pending redistribution/consent clearance. See [INPUTS.md](INPUTS.md) and [DATA_PROVENANCE.md](DATA_PROVENANCE.md).
+The public PDF was checked on 2 October 2026: SHA-256 `51c76b7e04c24767294674ec9fcf9a2ca6d238810c73c53c519b57218ba128a4`. Its scientific text matches the 30 September corrected research manuscript. The external URL may later be updated; this date and hash identify the version corresponding to the released results.
 
-## Setup
+## Quick start
 
 Python 3.11 or newer:
 
@@ -22,7 +24,7 @@ python scripts/verify_release.py
 python -m unittest discover -s tests -v
 ```
 
-The verifier checks exact manifest membership and SHA-256 hashes. The tests exercise rank residualization, fractional allocation of tied scores, and missing-outcome endpoints against independent enumeration. Tests use only synthetic values, not hidden empirical data. Neither command requires an API key or model call.
+Expected output: the verifier reports `status: PASS` for 15 manifested files and the unit suite reports six passing tests. Tests cover rank residualization, fractional allocation of tied scores, and missing-outcome endpoints against independent enumeration. After dependency installation, these small CPU-only checks run offline in seconds without empirical data, API keys or model calls. A GPU is unnecessary.
 
 ## Replay the empirical results with eligible local inputs
 
@@ -34,26 +36,24 @@ python scripts/replay_results.py --data-dir ../eligible-selection-inputs
 
 Expected output is JSON with `status: PASS`, `current_joint_rows: 3443`, `selection_panels: 6`, and `bound_endpoints: 24`. The script compares cumulative and fixed-horizon raw/adjusted point estimates, six 10%-budget panels and all 24 bound endpoints against saved results. It does not write to the release.
 
-This command was tested locally against the retained eligible inputs; those inputs are not distributed here. A public checkout alone can run the verifier and synthetic tests, but cannot independently reproduce the empirical values without those data. The replay does not reconstruct matching, citation histories, bootstrap intervals, secondary model fits or provider serving state. Stored uncertainty and secondary results are clearly marked as frozen outputs in [RESULTS.md](RESULTS.md).
+This command was tested locally against retained eligible inputs and completed in about two seconds on a CPU, without API calls; runtime depends on hardware. A public checkout alone cannot reproduce the empirical values because the input rows are not distributed. The replay does not reconstruct matching, citation histories, bootstrap intervals, secondary model fits or historical provider state. Fresh API queries cannot be assumed to recover the original snapshots exactly.
 
-## Contents
+## Paper results and commands
 
-| Path | Purpose |
+| Matching research-draft result | Available evidence and replay |
 |---|---|
-| `scripts/replay_results.py` | Offline point-estimate and missing-outcome-bound replay with explicit local inputs |
-| `scripts/verify_release.py` | Integrity and membership verification |
-| `tests/test_analysis.py` | Synthetic correctness checks independent of empirical inputs |
-| `results/corrected_results.json` | Corrected correlations, selection estimates, intervals and secondary analyses |
-| `results/missing_outcome_bounds.json` | Finite-population partial-identification intervals |
-| `results/decision_pool_comparisons.json` | Budget/threshold family and direct pool comparisons |
-| `results/same_reviewer_analysis.json` | Aggregate reviewer-composition sensitivity |
-| `results/scorer_portability.json` | Aggregate alternate-scorer results, including unfavorable comparisons |
-| `MANIFEST_SHA256.json` | Exact release file inventory |
+| Figure 1 / Table 2: matched reviewer-score associations | `scripts/replay_results.py --data-dir ...` recomputes point estimates from eligible inputs; intervals are saved in `results/corrected_results.json`. |
+| Table 3 / Tables 8–9: 10%-budget selection | The same command recomputes six panels; saved bootstrap intervals are not regenerated. |
+| Table 4: missing-outcome bounds | The same command recomputes 24 bound endpoints in `results/missing_outcome_bounds.json`. |
+| Tables 10–12: direct pool contrasts and budget sensitivity | Frozen outputs in `results/decision_pool_comparisons.json`; not recomputed by this package. |
+| Reviewer-composition and secondary profile analyses | Frozen aggregate files in `results/`, including adverse scorer-portability results; detailed coverage in [RESULTS.md](RESULTS.md). |
 
-Source data are credited to [OpenReview](https://openreview.net/) and [Semantic Scholar](https://www.semanticscholar.org/?utm_source=api). Their rights are not replaced by the project code license.
+`MANIFEST_SHA256.json` covers the complete release file inventory. Integrity checks and synthetic tests are not empirical replication.
 
-## Public release versus anonymous review
+## Data and rights
 
-This public repository is not certified anonymous: its account, paper title and public links can connect it to the authors. Reviewer-facing snapshots and conference submissions remain separate and are not changed by this release. Personal contact details and affiliations are not needed in the analysis files.
+This compact release contains code and aggregate results, not the underlying dataset. Row-level API-derived outcomes, source texts, individual human ratings and provider logs are excluded pending redistribution/consent clearance. [INPUTS.md](INPUTS.md) specifies required inputs and unreproduced construction steps; [DATA_PROVENANCE.md](DATA_PROVENANCE.md) explains source attribution and restrictions. Project code/documentation retain the [MIT licence](LICENSE); this does not relicense OpenReview or Semantic Scholar data or the externally hosted manuscript.
 
-Intentionally excluded: raw API data, article/reviewer text, individual human ratings, identity/linkage maps, API responses, credentials, manuscripts and old drafts, private reviews, planning records, comparator archives, caches, checkpoints and unrelated projects. No external model call or paid experiment is performed by the documented commands.
+## Citation
+
+For scientific claims, cite the linked manuscript using its displayed bibliographic information and identify it as the **1 October 2026 research draft**, not the original workshop snapshot. For code, cite this repository URL, the **2 October 2026** release date and the commit used. The public paper link identifies the work; this repository is not an anonymous-review package.

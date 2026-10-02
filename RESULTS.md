@@ -2,6 +2,8 @@
 
 This release preserves both favorable and unfavorable findings. The primary corrected cohort has 3,443 papers. Conditional citation-rank associations are approximately .009 for TNS and .188 for ENS. The 2023 10%-budget comparison has precision .323 for TNS and .424 for ENS; Recommendation is an important competing criterion, not an omitted rival.
 
+These results correspond to the dated research draft linked in [README.md](README.md), not the original workshop snapshot. The primary criterion comparison is Figure 1/Table 2; the six historical selection panels are Table 3 and Appendix Tables 8–9; the missing-outcome bounds are Table 4. Appendix Tables 10–12 report direct pool contrasts and budget sensitivity. Table 5, Table 6 and Appendix Table 14 contain secondary profile, human-rating and text-baseline results. Section 5 reports the same-reviewer sensitivity and Section 6 reports scorer portability. Their saved outputs remain distinct from the analyses replayed by the compact script below.
+
 The missing-outcome analysis concerns 4,867 score-observed papers, not the full source population. Bounds are deterministic identification intervals conditional on fixed scores, thresholds and missingness setup; they are not confidence intervals or causal effects. Direct all-versus-accepted contrasts remain unresolved. Statistical non-significance is not evidence of equivalence.
 
 | Saved file | Recomputed by the included empirical replay | Frozen output only |
